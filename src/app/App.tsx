@@ -1,7 +1,10 @@
 import { Rotas } from "./routes";
+import { LoggedUserProvider } from "./shared/contexts";
 
 export const App = () => {
   return (
-    <Rotas />
+    <LoggedUserProvider>
+      <Rotas />
+    </LoggedUserProvider>
   );
 };
