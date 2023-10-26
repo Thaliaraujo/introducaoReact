@@ -8,7 +8,6 @@ export const Rotas = () => {
                 <Route path="/pagina-inicial" element={<Dashboard />}/>
                 <Route path="/login" element={<Login />}/>
 
-
                 <Route path="*" element={<Navigate to='/pagina-inicial'/>} />
             </Routes>
         </BrowserRouter>
