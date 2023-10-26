@@ -1,24 +1,43 @@
-import { useRef } from "react";
-import { Link } from "react-router-dom";
+import {useCallback, useState } from "react";
 
-import { useLoggedUser } from "../../shared/hooks/UseLoggedUser";
 
 export const Dashboard = () => {
-    const counterRef = useRef({ counter: 0});
 
-    const {userName} = useLoggedUser();
+    const [list, setList] = useState<string[]>(['item1', 'item2', 'item3']);
+
+    const handleInputKeyDown: React.KeyboardEventHandler<HTMLInputElement> = useCallback((e) => {
+        if(e.key === 'Enter') {
+            if(e.currentTarget.value.trim().length === 0) return;
+
+            const value = e.currentTarget.value;
+
+            e.currentTarget.value = '';
+
+            setList((oldList) => {
+
+                if(oldList.includes(value)) return oldList;
+                
+                return [...oldList, value];
+            });
+        };
+    }, []);
+
 
     return(
         <div>
-            <p>Dashboard</p>
+            <p>Lista</p>
 
-            <p>{userName}</p>
+            <input 
+                onKeyDown={handleInputKeyDown}
+            />
 
-            <p>Contador: {counterRef.current.counter} </p>
-
-            <button onClick={() => counterRef.current.counter++}>Somar</button>
-            
-            <Link to="/login">login</Link>
+            <ul>
+                {list.map((value) => {
+                    return(
+                        <li key={value}>{value}</li>
+                    )
+                })}
+            </ul>
         </div>
     );
 };
