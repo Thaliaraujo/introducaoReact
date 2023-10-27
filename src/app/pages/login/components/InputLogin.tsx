@@ -6,7 +6,7 @@ interface IInputLoginProps {
     value: string,
     onChange: (newvalue: string) => void;
     onPressEnter?: () => void;
-}
+};
 
 export const InputLogin = React.forwardRef<HTMLInputElement, IInputLoginProps>((props, ref) => {
     return(

@@ -4,24 +4,19 @@
       "id": 1,
       "title": "Tarefa 01",
       "complete": "false",
-      "isCompleted": false
+      "isCompleted": true
     },
     {
       "id": 2,
       "title": "Tarefa 02",
       "complete": "false",
-      "isCompleted": false
+      "isCompleted": true
     },
     {
       "id": 3,
       "title": "Tarefa 03",
       "complete": "false",
-      "isCompleted": false
-    },
-    {
-      "title": "banana rosa",
-      "isCompleted": false,
-      "id": 4
+      "isCompleted": true
     }
   ]
 }

@@ -54,7 +54,6 @@ export const Login = () => {
                 />
 
                 <ButtonLogin type="button" onClick={handleLogin}>Entrar</ButtonLogin>
-                <ButtonLogin type="button" onClick={handleLogin}>Cadastrar</ButtonLogin>   
             </form>
         </div>
     );
