@@ -1,7 +1,7 @@
 import { Api } from "../ApiConfig";
 import { ApiException } from "../ApiException";
 
-interface ITask {
+export interface ITask {
     id: number;
     title: string;
     isCompleted: boolean;
