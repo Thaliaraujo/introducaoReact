@@ -12,7 +12,6 @@ export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-
     useEffect(() => {
         console.log(email)
     }, [email]);
